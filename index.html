@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mulaishcreatives | AI Content Creator</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#05070d;
+  color:white;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+  position:fixed;
+  top:15px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1100px,92%);
+  z-index:1000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:15px 20px;
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+
+  background:rgba(5,7,13,.88);
+  backdrop-filter:blur(20px);
+}
+
+.logo{
+  font-size:18px;
+  font-weight:800;
+}
+
+.logo span{
+  color:#72aaff;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#c7cede;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:white;
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  color:white;
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:120px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 13px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:30px;
+  background:rgba(255,255,255,.04);
+  color:#cdd7ff;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+h1{
+  font-size:clamp(48px,7vw,86px);
+  line-height:.96;
+  letter-spacing:-4px;
+}
+
+.gradient{
+  background:linear-gradient(100deg,#72aaff,#9b6cff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  color:#aab2c7;
+  font-size:18px;
+  max-width:620px;
+  margin:25px 0;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 18px;
+  border-radius:13px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.06);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:linear-gradient(110deg,#72aaff,#9b6cff);
+  border:0;
+}
+
+.hero-card{
+  padding:40px;
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(16,21,34,.8);
+  border-radius:25px;
+
+  box-shadow:0 30px 90px rgba(0,0,0,.5);
+}
+
+.orbit{
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  border:1px solid rgba(114,170,255,.4);
+
+  display:grid;
+  place-items:center;
+
+  margin:0 auto 25px;
+
+  box-shadow:0 0 70px rgba(114,170,255,.12);
+}
+
+.orbit::after{
+  content:"AI";
+  font-size:58px;
+  font-weight:900;
+  background:linear-gradient(100deg,#fff,#72aaff,#9b6cff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* SECTIONS */
+
+section{
+  padding:110px 0;
+}
+
+.section-head{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 45px;
+}
+
+.section-head h2{
+  font-size:clamp(36px,5vw,58px);
+  letter-spacing:-2px;
+}
+
+.section-head p{
+  color:#aab2c7;
+  margin-top:12px;
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:17px;
+}
+
+.card{
+  padding:26px;
+
+  border:1px solid rgba(255,255,255,.11);
+  background:rgba(16,21,34,.75);
+
+  border-radius:22px;
+
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(114,170,255,.4);
+}
+
+.icon{
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#aab2c7;
+  font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+  grid-template-columns:repeat(5,1fr);
+}
+
+/* MAP */
+
+.map-grid{
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:20px;
+}
+
+.map{
+  min-height:420px;
+  overflow:hidden;
+  border-radius:25px;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.map iframe{
+  width:100%;
+  height:100%;
+  min-height:420px;
+  border:0;
+}
+
+.location-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* CONTACT */
+
+.contact-box{
+  max-width:900px;
+  margin:auto;
+  padding:50px;
+
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(16,21,34,.8);
+  border-radius:25px;
+}
+
+/* PAYMENT */
+
+.payment{
+  max-width:900px;
+  margin:auto;
+  padding:55px;
+
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(16,21,34,.8);
+
+  border-radius:25px;
+}
+
+.payment-buttons{
+  display:flex;
+  justify-content:center;
+  margin-top:25px;
+}
+
+/* QR MODAL */
+
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:2000;
+
+  display:none;
+  place-items:center;
+
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(10px);
+
+  padding:20px;
+}
+
+.modal.active{
+  display:grid;
+}
+
+.modal-box{
+  width:min(450px,94vw);
+
+  padding:25px;
+
+  text-align:center;
+
+  background:#090c14;
+  border:1px solid rgba(255,255,255,.15);
+
+  border-radius:25px;
+}
+
+.modal-box p{
+  color:#aab2c7;
+  margin-top:8px;
+}
+
+.qr{
+  width:min(350px,82vw);
+  max-height:60vh;
+  object-fit:contain;
+
+  display:block;
+
+  margin:20px auto;
+
+  background:white;
+  padding:8px;
+  border-radius:12px;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:50px 20px;
+  text-align:center;
+  color:#aab2c7;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .hero-card{
+    max-width:600px;
+    width:100%;
+    margin:auto;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .process{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .map-grid{
+    grid-template-columns:1fr;
+  }
+
+  .map{
+    min-height:350px;
+  }
+
+  .map iframe{
+    min-height:350px;
+  }
+}
+
+@media(max-width:650px){
+
+  nav{
+    width:94%;
+    padding:13px 16px;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+
+    position:absolute;
+
+    top:62px;
+    left:0;
+    right:0;
+
+    flex-direction:column;
+    align-items:stretch;
+
+    padding:18px;
+
+    background:#090c14;
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:17px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    padding:10px;
+    font-size:15px;
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:145px;
+    padding-bottom:80px;
+  }
+
+  h1{
+    font-size:48px;
+    letter-spacing:-2.5px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .buttons{
+    width:100%;
+  }
+
+  .btn{
+    text-align:center;
+  }
+
+  .hero-card{
+    padding:30px 20px;
+  }
+
+  .orbit{
+    width:170px;
+    height:170px;
+  }
+
+  section{
+    padding:75px 0;
+  }
+
+  .section-head{
+    margin-bottom:30px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .process{
+    grid-template-columns:1fr;
+  }
+
+  .map{
+    min-height:300px;
+  }
+
+  .map iframe{
+    min-height:300px;
+  }
+
+  .contact-box,
+  .payment{
+    padding:32px 20px;
+  }
+
+  footer{
+    padding:40px 20px;
+  }
+}
+
+@media(max-width:380px){
+
+  h1{
+    font-size:41px;
+  }
+
+  .logo{
+    font-size:16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="#home" class="logo">
+Mulaish<span>creatives</span>
+</a>
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#process">Process</a>
+<a href="#location">Location</a>
+<a href="#contact">Contact</a>
+<a href="#payment">Payment</a>
+
+</div>
+
+<button class="menu" id="menu">
+☰
+</button>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+AI Content Creator • Digital Marketing Executive
+</div>
+
+<h1>
+Ideas into
+<span class="gradient">AI-Powered</span>
+Experiences.
+</h1>
+
+<p>
+Premium AI content, advertising and digital experiences designed for modern brands and digital platforms.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="#contact">
+Let's Create
+</a>
+
+<a class="btn" href="#portfolio">
+View My Work
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="orbit"></div>
+
+<h2>
+Creative. Digital. AI.
+</h2>
+
+<p style="color:#aab2c7;margin-top:10px;">
+Modern visual content and digital marketing solutions from Bikaner, Rajasthan.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+Creative Mind.
+<span class="gradient">AI Powered.</span>
+</h2>
+
+<p>
+Mulaishcreatives combines AI, creativity and digital marketing to create engaging visual content, advertising campaigns, websites and social media creatives.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">✦</div>
+<h3>AI Creativity</h3>
+<p>Modern AI-powered creative workflows.</p>
+</div>
+
+<div class="card">
+<div class="icon">◈</div>
+<h3>Visual Storytelling</h3>
+<p>Visuals designed to communicate ideas clearly.</p>
+</div>
+
+<div class="card">
+<div class="icon">↗</div>
+<h3>Digital Marketing</h3>
+<p>Creative content built for digital platforms.</p>
+</div>
+
+<div class="card">
+<div class="icon">◇</div>
+<h3>Modern Design</h3>
+<p>Clean, premium and memorable presentation.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+What I <span class="gradient">Create.</span>
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🎬</div>
+<h3>AI Video Creation</h3>
+<p>Cinematic AI-powered videos and promotional content.</p>
+</div>
+
+<div class="card">
+<div class="icon">◉</div>
+<h3>AI UGC Ads</h3>
+<p>Engaging AI-powered UGC-style advertising creatives.</p>
+</div>
+
+<div class="card">
+<div class="icon">⌁</div>
+<h3>Digital Marketing</h3>
+<p>Strategic campaigns for online visibility and growth.</p>
+</div>
+
+<div class="card">
+<div class="icon">▣</div>
+<h3>Meta Ads</h3>
+<p>Professional Facebook and Instagram advertising campaigns.</p>
+</div>
+
+<div class="card">
+<div class="icon">G</div>
+<h3>Google Ads</h3>
+<p>Targeted Google advertising campaigns.</p>
+</div>
+
+<div class="card">
+<div class="icon">◎</div>
+<h3>Social Media Management</h3>
+<p>Engaging content and social media management.</p>
+</div>
+
+<div class="card">
+<div class="icon">⌘</div>
+<h3>Website Design</h3>
+<p>Modern, responsive and professional websites.</p>
+</div>
+
+<div class="card">
+<div class="icon">✎</div>
+<h3>Graphic Design</h3>
+<p>Premium graphics, creatives and branding visuals.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+Selected <span class="gradient">Work.</span>
+</h2>
+
+<p>
+AI videos, advertising creatives and digital experiences.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">01</div>
+<h3>AI Video Projects</h3>
+<p>AI-powered promotional and creative videos.</p>
+</div>
+
+<div class="card">
+<div class="icon">02</div>
+<h3>Advertising Creatives</h3>
+<p>Modern advertising campaigns and social creatives.</p>
+</div>
+
+<div class="card">
+<div class="icon">03</div>
+<h3>Digital Experiences</h3>
+<p>Modern websites and digital brand experiences.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="process">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+Simple <span class="gradient">Process.</span>
+</h2>
+
+</div>
+
+
+<div class="grid process">
+
+<div class="card">
+<h3>01 — Concept</h3>
+<p>Understand the idea and objective.</p>
+</div>
+
+<div class="card">
+<h3>02 — Strategy</h3>
+<p>Plan the creative direction.</p>
+</div>
+
+<div class="card">
+<h3>03 — Create</h3>
+<p>Produce the required content.</p>
+</div>
+
+<div class="card">
+<h3>04 — Edit</h3>
+<p>Polish visuals and presentation.</p>
+</div>
+
+<div class="card">
+<h3>05 — Launch</h3>
+<p>Deliver the final creative.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section id="location">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+Based in
+<span class="gradient">Bikaner, Rajasthan.</span>
+</h2>
+
+<p>
+Creating digital experiences from the heart of Rajasthan.
+</p>
+
+</div>
+
+
+<div class="map-grid">
+
+<div class="map">
+
+<iframe
+src="https://www.google.com/maps?q=Bikaner%2C%20Rajasthan%2C%20India&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="card location-card">
+
+<div class="icon">
+⌖
+</div>
+
+<h3>
+Mulaishcreatives
+</h3>
+
+<p>
+AI Content Creator • Digital Marketing Executive
+</p>
+
+<br>
+
+<p>
+<b style="color:white">
+Location
+</b>
+<br>
+Bikaner, Rajasthan, India
+</p>
+
+<br>
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Bikaner%2C%20Rajasthan%2C%20India">
+
+Open in Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="section-head" style="margin-bottom:20px;">
+
+<h2>
+Let's Create Something
+<span class="gradient">Amazing.</span>
+</h2>
+
+</div>
+
+<p style="color:#aab2c7;margin-bottom:25px;">
+WhatsApp: 9511385025
+</p>
+
+
+<div class="buttons" style="justify-content:center;">
+
+<a
+class="btn btn-primary"
+target="_blank"
+href="https://wa.me/919511385025">
+
+Chat on WhatsApp
+
+</a>
+
+<a
+class="btn"
+target="_blank"
+href="https://www.instagram.com/mulaishcreatives">
+
+Instagram
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAYMENT — LAST SECTION -->
+
+<section id="payment">
+
+<div class="container">
+
+<div class="payment">
+
+<div class="section-head" style="margin-bottom:0;">
+
+<h2>
+Secure <span class="gradient">Payment.</span>
+</h2>
+
+<p>
+Scan the QR code to make your payment.
+</p>
+
+</div>
+
+
+<div class="payment-buttons">
+
+<button
+class="btn btn-primary"
+id="scanBtn">
+
+Scan & Pay
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<strong>Mulaishcreatives</strong>
+
+<br>
+
+AI Content Creator • Digital Marketing Executive
+
+<br><br>
+
+© 2026 Mulaishcreatives. All rights reserved.
+
+</footer>
+
+
+<!-- QR MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<h2>
+Scan & Pay
+</h2>
+
+<p>
+Scan this QR code using your UPI app.
+</p>
+
+<!-- अपनी QR IMAGE का नाम यहाँ डालना -->
+<img
+class="qr"
+src="qr.png"
+alt="UPI Payment QR Code">
+
+<strong>
+Scan & Pay securely using UPI
+</strong>
+
+<br><br>
+
+<button
+class="btn"
+id="closeBtn">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+const menu =
+document.getElementById("menu");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menu.addEventListener("click",function(){
+
+navLinks.classList.toggle("active");
+
+});
+
+
+/* CLOSE MENU AFTER CLICK */
+
+document.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+navLinks.classList.remove("active");
+
+});
+
+});
+
+
+/* QR MODAL */
+
+const modal =
+document.getElementById("modal");
+
+const scanBtn =
+document.getElementById("scanBtn");
+
+const closeBtn =
+document.getElementById("closeBtn");
+
+
+scanBtn.addEventListener("click",function(){
+
+modal.classList.add("active");
+
+});
+
+
+closeBtn.addEventListener("click",function(){
+
+modal.classList.remove("active");
+
+});
+
+
+modal.addEventListener("click",function(e){
+
+if(e.target === modal){
+
+modal.classList.remove("active");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
