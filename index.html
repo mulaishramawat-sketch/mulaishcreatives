@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mulaishcreatives — AI Content Creator and Digital Marketing Executive in Bikaner, Rajasthan.">
+<meta property="og:title" content="Mulaishcreatives">
+<meta property="og:description" content="AI Content Creator • Digital Marketing Executive">
+<title>Mulaishcreatives | AI Content Creator</title>
+<style>
+:root{--bg:#05070d;--card:rgba(16,20,34,.72);--text:#f7f8ff;--muted:#aab1c5;--line:rgba(255,255,255,.10);--a:#6ea8ff;--b:#9b6cff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 80% 0%,rgba(110,168,255,.13),transparent 28%),radial-gradient(circle at 10% 35%,rgba(155,108,255,.10),transparent 25%),var(--bg);color:var(--text);overflow-x:hidden}
+a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1120px,92%);z-index:50;padding:14px 18px;border:1px solid var(--line);border-radius:20px;background:rgba(5,7,13,.72);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.2px}.logo span{color:var(--a)}
+.links{display:flex;gap:22px;color:#cdd3e3;font-size:14px}.links a:hover{color:white}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:100vh;padding-top:105px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:42px;align-items:center}
+.eyebrow{display:inline-block;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#cbd5ff;background:rgba(255,255,255,.04);font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(48px,7vw,92px);line-height:.94;letter-spacing:-4px}
+.gradient{background:linear-gradient(100deg,#fff,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:22px 0;color:var(--muted);font-size:18px;line-height:1.7;max-width:560px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 18px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:white;cursor:pointer;font-weight:700}.btn.primary{background:linear-gradient(110deg,var(--a),var(--b));border:0}
+.showcase{position:relative;border:1px solid var(--line);border-radius:26px;padding:8px;background:rgba(255,255,255,.035);box-shadow:0 30px 100px rgba(0,0,0,.45);overflow:hidden}
+.video-wrap{position:relative;aspect-ratio:16/10;border-radius:20px;overflow:hidden;background:#020307}
+video{width:100%;height:100%;object-fit:cover;display:block}
+.video-label{position:absolute;left:18px;bottom:18px;padding:9px 12px;border-radius:12px;background:rgba(0,0,0,.52);backdrop-filter:blur(12px);font-size:12px}
+section{padding:105px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 45px}.section-head h2{font-size:clamp(34px,5vw,58px);letter-spacing:-2px}.section-head p{color:var(--muted);line-height:1.7;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{padding:25px;border:1px solid var(--line);border-radius:20px;background:var(--card);backdrop-filter:blur(15px);transition:.3s}.card:hover{transform:translateY(-6px);border-color:rgba(110,168,255,.35)}.icon{font-size:28px;margin-bottom:22px}.card h3{margin-bottom:9px}.card p{color:var(--muted);line-height:1.6;font-size:14px}
+.services{grid-template-columns:repeat(4,1fr)}.process{grid-template-columns:repeat(5,1fr)}
+.map-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:18px}.map{min-height:420px;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#101522}.map a{display:block;height:100%}.map-preview{width:100%;height:100%;min-height:420px;display:block;object-fit:cover;object-position:center}
+.contact{text-align:center}.contact-box,.payment{max-width:850px;margin:auto;text-align:center;padding:45px;border:1px solid var(--line);border-radius:28px;background:var(--card);backdrop-filter:blur(16px)}
+.payment{margin-top:25px}.payment-actions{display:flex;justify-content:center;gap:12px;margin-top:25px;flex-wrap:wrap}
+footer{padding:45px 0 70px;border-top:1px solid var(--line);text-align:center;color:var(--muted)}footer strong{color:white}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.72);backdrop-filter:blur(10px)}.modal.open{display:grid}
+.modal-box{width:min(470px,94vw);padding:25px;border:1px solid var(--line);border-radius:25px;background:#0a0d16;box-shadow:0 30px 100px rgba(0,0,0,.65);text-align:center}.modal-box h3{font-size:27px;margin-bottom:8px}.modal-box p{color:var(--muted);line-height:1.5}.qr{width:min(370px,82vw);max-height:62vh;object-fit:contain;display:block;margin:22px auto;border-radius:12px;background:white;padding:8px}.close{width:100%}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+/* Strong mobile-first responsiveness */
+@media(max-width:1100px), (pointer:coarse){
+  .container{width:min(94%,760px)}
+  nav{width:min(94%,760px)}
+  .hero-grid,.map-grid{grid-template-columns:1fr}
+  .hero{min-height:auto;padding-top:140px}
+  .hero-card{max-width:620px;margin:0 auto;width:100%}
+  .grid,.services{grid-template-columns:repeat(2,1fr)}
+  .process{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px), (pointer:coarse){
+  body{font-size:15px}
+  nav{top:8px;padding:11px 14px;border-radius:16px}
+  .logo{font-size:16px}
+  .links{display:none}
+  .menu{display:block;background:none;border:0;color:#fff;font-size:24px;line-height:1;padding:3px 5px}
+  .links.open{display:flex;position:absolute;top:58px;left:0;right:0;flex-direction:column;gap:0;padding:8px;border:1px solid var(--line);border-radius:16px;background:rgba(7,10,18,.98);box-shadow:0 20px 50px #0009}
+  .links.open a{padding:12px 14px;border-radius:10px}
+  .links.open a:hover{background:#ffffff0b}
+  section{padding:72px 0}
+  .hero{padding-top:125px}
+  .hero-grid{gap:24px}
+  h1{font-size:clamp(42px,12vw,62px);line-height:.98;letter-spacing:-2.5px}
+  .hero p{font-size:16px}
+  .hero-card{padding:28px 20px}
+  .orbit{width:155px;height:155px}
+  .orbit:after{font-size:42px}
+  .grid,.services,.process{grid-template-columns:1fr}
+  .card{padding:22px}
+  .map{min-height:300px}
+  .map-preview{min-height:300px;object-position:center}
+  .contact-box,.payment{padding:28px 18px}
+  .btns,.payment-actions{width:100%}
+  .btns .btn,.payment-actions .btn{flex:1;text-align:center}
+  .head h2{font-size:clamp(34px,9vw,48px)}
+}
+@media(min-width:701px) and (max-width:1100px) and (pointer:fine){
+  .menu{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}.card{transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#home">Mulaish<span>creatives</span></a>
+  <div class="links" id="links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a><a href="#process">Process</a><a href="#location">Location</a>
+    <a href="#contact">Contact</a><a href="#payment">Payment</a>
+  </div>
+  <button class="menu" id="menu" aria-label="Open menu">☰</button>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">AI Content Creator • Digital Marketing Executive</div>
+      <h1>Turning Ideas Into <span class="gradient">AI-Powered</span> Experiences.</h1>
+      <p>Premium AI content, advertising and digital experiences designed for modern brands and digital platforms.</p>
+      <div class="btns"><a class="btn primary" href="#contact">Let's Create</a><a class="btn" href="#portfolio">View My Work</a></div>
+    </div>
+    <div class="showcase reveal">
+      <div style="aspect-ratio:16/10;border-radius:20px;display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,#315b9a55,transparent 35%),radial-gradient(circle at 70% 80%,#9b6cff44,transparent 35%),#080b13;position:relative;overflow:hidden">
+        <div style="text-align:center;padding:30px">
+          <div style="font-size:14px;letter-spacing:3px;color:#aab1c5;margin-bottom:15px">MULAISHCREATIVES</div>
+          <div style="font-size:clamp(38px,6vw,70px);font-weight:900;line-height:.95">AI <span class="gradient">CREATIVE</span></div>
+          <div style="color:#aab1c5;margin-top:16px">Content • Ads • Digital Experiences</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about"><div class="container">
+  <div class="section-head reveal"><h2>Creative Mind. <span class="gradient">AI Powered.</span></h2><p>Mulaishcreatives combines AI, creativity and digital marketing to create engaging visual content, advertising campaigns, websites and social media creatives.</p></div>
+  <div class="grid">
+    <div class="card reveal"><div class="icon">✦</div><h3>AI Creativity</h3><p>Modern AI-powered creative workflows.</p></div>
+    <div class="card reveal"><div class="icon">◈</div><h3>Visual Storytelling</h3><p>Visuals designed to communicate ideas clearly.</p></div>
+    <div class="card reveal"><div class="icon">↗</div><h3>Digital Marketing</h3><p>Creative content built for digital platforms.</p></div>
+    <div class="card reveal"><div class="icon">◇</div><h3>Modern Design</h3><p>Clean, premium and memorable presentation.</p></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="container">
+  <div class="section-head reveal"><h2>What I <span class="gradient">Create.</span></h2><p>Creative and marketing services for digital-first brands.</p></div>
+  <div class="grid services">
+    <div class="card reveal"><div class="icon">🎬</div><h3>AI Video Creation</h3><p>Cinematic AI-powered videos and promotional content.</p></div>
+    <div class="card reveal"><div class="icon">◉</div><h3>AI UGC Ads</h3><p>Engaging AI-powered UGC-style advertising creatives.</p></div>
+    <div class="card reveal"><div class="icon">⌁</div><h3>Digital Marketing</h3><p>Strategic campaigns focused on visibility and growth.</p></div>
+    <div class="card reveal"><div class="icon">▣</div><h3>Meta Ads</h3><p>Professional Facebook and Instagram advertising campaigns.</p></div>
+    <div class="card reveal"><div class="icon">G</div><h3>Google Ads</h3><p>Targeted Google advertising campaigns.</p></div>
+    <div class="card reveal"><div class="icon">◎</div><h3>Social Media Management</h3><p>Engaging content and social media management.</p></div>
+    <div class="card reveal"><div class="icon">⌘</div><h3>Website Design</h3><p>Modern, responsive and professional websites.</p></div>
+    <div class="card reveal"><div class="icon">✎</div><h3>Graphic Design</h3><p>Premium graphics, creatives and branding visuals.</p></div>
+  </div>
+</div></section>
+
+<section id="portfolio"><div class="container">
+  <div class="section-head reveal"><h2>Selected <span class="gradient">Work.</span></h2><p>Portfolio content can be added here. No fake projects are displayed.</p></div>
+  <div class="grid">
+    <div class="card reveal"><div class="icon">01</div><h3>AI Video Project</h3><p>Editable portfolio placeholder — replace with your real project.</p></div>
+    <div class="card reveal"><div class="icon">02</div><h3>Advertising Creative</h3><p>Editable portfolio placeholder — replace with your real project.</p></div>
+    <div class="card reveal"><div class="icon">03</div><h3>Digital Experience</h3><p>Editable portfolio placeholder — replace with your real project.</p></div>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="section-head reveal"><h2>Why <span class="gradient">Mulaishcreatives?</span></h2></div>
+  <div class="grid">
+    <div class="card reveal"><h3>Creative AI Solutions</h3><p>Modern AI-powered creative workflows.</p></div>
+    <div class="card reveal"><h3>Professional Visual Quality</h3><p>High-quality visual content for digital platforms.</p></div>
+    <div class="card reveal"><h3>Marketing-Focused Content</h3><p>Content created with audience attention in mind.</p></div>
+    <div class="card reveal"><h3>Modern Digital Strategy</h3><p>Creative solutions combined with digital marketing.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="container">
+  <div class="section-head reveal"><h2>Simple <span class="gradient">Process.</span></h2></div>
+  <div class="grid process">
+    <div class="card reveal"><h3>01 — Concept</h3><p>Understand the idea and objective.</p></div>
+    <div class="card reveal"><h3>02 — Strategy</h3><p>Plan the creative and marketing direction.</p></div>
+    <div class="card reveal"><h3>03 — Create</h3><p>Produce the required content.</p></div>
+    <div class="card reveal"><h3>04 — Edit</h3><p>Polish visuals, motion and presentation.</p></div>
+    <div class="card reveal"><h3>05 — Launch</h3><p>Deliver the final creative for digital use.</p></div>
+  </div>
+</div></section>
+
+<section id="location"><div class="container">
+  <div class="section-head reveal"><h2>Based in <span class="gradient">Bikaner, Rajasthan.</span></h2><p>Creating digital experiences from the heart of Rajasthan.</p></div>
+  <div class="map-grid">
+    <div class="map reveal">
+      <a href="https://www.google.com/maps/search/?api=1&query=Bikaner%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener"><img class="map-preview" src="data:image/jpeg;base64,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
